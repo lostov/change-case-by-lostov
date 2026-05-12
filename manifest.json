@@ -1,0 +1,87 @@
+{
+    "manifest_version": 3,
+    "name": "Change Case by mr.lostov",
+    "version": "2.2.2",
+    "description": "расширения с горячими клавишами",
+    "permissions": [
+        "storage", 
+        "activeTab", 
+        "scripting",
+        "contextMenus"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "commands": {
+        "toggle-uppercase": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+U",
+                "mac": "Command+Alt+U"
+            },
+            "description": "Преобразовать в UPPERCASE регистр"
+        },
+        "toggle-lowercase": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+L",
+                "mac": "Command+Alt+L"
+            },
+            "description": "Преобразовать в lowercase регистр"
+        },
+        "toggle-titlecase": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+K",
+                "mac": "Command+Alt+K"
+            },
+            "description": "Преобразовать в Title Case регистр"
+        },
+        "toggle-sentencecase": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+S",
+                "mac": "Command+Alt+S"
+            },
+            "description": "Преобразовать в Sentence case регистр"
+        },
+        "toggle-pascalcase": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+P",
+                "mac": "Command+Alt+P"
+            },
+            "description": "Преобразовать в PascalCase регистр"
+        },
+        "toggle-camelcase": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+C",
+                "mac": "Command+Alt+C"
+            },
+            "description": "Преобразовать в camelCase регистр"
+        },
+        "toggle-constantcase": {
+            "description": "Преобразовать в CONSTANT_CASE регистр"
+        },
+        "toggle-snakecase": {
+            "description": "Преобразовать в snake_case регистр"
+        },
+        "toggle-dotcase": {
+            "description": "Преобразовать в dot.case регистр"
+        }
+    },
+    "icons": {
+        "16": "assets/icon16.png",
+        "19": "assets/icon19.png",
+        "38": "assets/icon38.png",
+        "48": "assets/icon48.png",
+        "128": "assets/icon128.png"
+    },
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_title": "Сменить регистр",
+        "default_icon": "assets/icon-48.png"
+    },
+    "options_ui": {
+        "page": "options/options.html",
+        "open_in_tab": true
+    }
+}

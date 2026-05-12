@@ -5,12 +5,7 @@
     "browser_specific_settings": {
         "gecko": {
             "id": "manuchehr@jalolov.ru",
-            "strict_min_version": "109.0",
-            "data_collection_permissions": {
-                "required": [
-                    "none"
-                ]
-            }
+            "strict_min_version": "109.0"
         }
     },
     "description": "расширения с горячими клавишами",

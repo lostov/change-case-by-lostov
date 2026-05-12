@@ -1,6 +1,7 @@
 # Change Case by mr.lostov
 
-![Version](https://img.shields.io/badge/version-1.1.1-blue.svg)
+![ChangeCase](https://img.shields.io/badge/change-case-blue?logo=case)
+![Version](https://img.shields.io/badge/version-2.3.1-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Firefox-orange.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 

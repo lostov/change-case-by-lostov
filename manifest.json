@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Change Case by mr.lostov",
-    "version": "2.2.2",
+    "version": "2.3.1",
     "browser_specific_settings": {
         "gecko": {
             "id": "manuchehr@jalolov.ru",

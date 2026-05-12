@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url('assets/Bahnschrift.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-blue: #009ff1;
+    --bg-light: #f5f8fb;
+    --bg-dark: #1e1e1e;
+    --soft-black: #121417; 
+    
+    --text-main: var(--soft-black);
+    --text-muted: #5f6368;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    font-family: 'Bahnschrift', Segoe UI, sans-serif;
+}
+
+.text-muted {
+    color: var(--text-muted);
+}

@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <style>
-    body { width: 180px; padding: 10px; font-family: sans-serif; }
-    button { width: 100%; margin: 4px 0; cursor: pointer; padding: 8px; }
-  </style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <button id="upper">UPPERCASE</button>
-  <button id="lower">lowercase</button>
-  <button id="snake">snake_case</button>
-  <script src="popup.js"></script>
+    <div class="container">
+        <button class="case-btn" data-command="toggle-uppercase">UPPERCASE</button>
+        <button class="case-btn" data-command="toggle-lowercase">lowercase</button>
+        <button class="case-btn" data-command="toggle-titlecase">Title Case</button>
+        <button class="case-btn" data-command="toggle-sentencecase">Sentence case</button>
+
+        <hr>
+
+        <button id="open-options" class="link-btn">⚙️ Open options page</button>
+        <button id="open-github" class="link-btn">🐙 GitHub page</button>
+    </div>
+    <script src="popup.js"></script>
 </body>
 </html>

@@ -1,29 +1,22 @@
-document.querySelectorAll('button').forEach(btn => {
-  btn.addEventListener('click', async () => {
-    const caseType = btn.id;
-    const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
-    
-    // Выполняем скрипт трансформации в текущей вкладке
-    browser.scripting.executeScript({
-      target: { tabId: tab.id },
-      args: [caseType],
-      func: transformSelectedText
+document.addEventListener('DOMContentLoaded', () => {
+    // Обработка кнопок смены регистра
+    const buttons = document.querySelectorAll('.case-btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const command = button.getAttribute('data-command');
+            // Отправляем сообщение в background.js или напрямую вызываем скрипт
+            browser.runtime.sendMessage({ action: "change-case", command: command });
+            window.close(); // Закрыть попап после нажатия
+        });
     });
-  });
-});
 
-function transformSelectedText(type) {
-  const activeEl = document.activeElement;
-  // Логика получения текста (как обсуждали ранее)
-  // ... трансформация в зависимости от type ...
-}
+    // Открыть настройки
+    document.getElementById('open-options').addEventListener('click', () => {
+        browser.runtime.openOptionsPage();
+    });
 
-// Внутри popup.js
-document.getElementById('btn-upper').addEventListener('click', async () => {
-    const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
-    browser.scripting.executeScript({
-        target: { tabId: tab.id },
-        args: ['up'],
-        func: changeCaseOnPage
+    // Открыть GitHub
+    document.getElementById('open-github').addEventListener('click', () => {
+        window.open('https://github.com/lostov/change-case-by-lostov');
     });
 });

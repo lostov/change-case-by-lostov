@@ -2,6 +2,13 @@
     "manifest_version": 3,
     "name": "Change Case by mr.lostov",
     "version": "2.2.2",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "manuchehr@jalolov.ru",
+            "strict_min_version": "109.0",
+            "data_collection_permissions": false
+        }
+    },
     "description": "расширения с горячими клавишами",
     "permissions": [
         "storage", 
